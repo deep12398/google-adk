@@ -9,31 +9,85 @@
 - `agents/`：认知层，具体任务角色（研究、写作、QA、问候/告别）。
 - `tools/`：行动层，提供可调用的工具函数。
 
+## 总体流程图
+```mermaid
+flowchart TD
+  A[apps/main.py] --> B[apps/app.py: choose root_agent]
+  B --> C{WORKFLOW}
+  C -->|delegation| D[delegation_agent]
+  C -->|sequential| E[SequentialAgent]
+  C -->|parallel| F[ParallelAgent]
+  C -->|loop| G[LoopAgent]
+  D --> H[agents/*]
+  E --> H
+  F --> H
+  G --> H
+  H --> I[tools/*]
+```
+
 ## 四种编排示例
 1) 委派式（`delegation.py`）
 - 根 Agent 拥有 `sub_agents`，用于处理问候与告别。
 - 天气问题由根 Agent 直接调用工具。
 
+**委派式流程图**
+```mermaid
+flowchart LR
+  U[User] --> R[delegation_agent]
+  R -->|greeting| G[greeting_agent]
+  R -->|farewell| F[farewell_agent]
+  R -->|weather tool| T[get_weather]
+  G --> R
+  F --> R
+  T --> R
+  R --> U
+```
+
 2) 串行流水线（`sequential_pipeline.py`）
 - `SequentialAgent` 固定顺序执行：Research → Write → QA。
 - 通过 `output_key` 将中间结果写入共享状态，供下游读取。
+
+**串行流水线流程图**
+```mermaid
+flowchart TD
+  U[User] --> R[research_agent]
+  R --> W[write_agent]
+  W --> Q[qa_agent]
+  Q --> U
+```
 
 3) 并行研究（`parallel_research.py`）
 - `ParallelAgent` 同时运行多个研究 Agent。
 - 每个 Agent 写入独立的 state key，避免覆盖。
 
+**并行研究流程图**
+```mermaid
+flowchart TD
+  U[User] --> P[parallel_research]
+  P --> M[market_agent]
+  P --> T[tech_agent]
+  P --> R[risk_agent]
+  M --> P
+  T --> P
+  R --> P
+  P --> U
+```
+
 4) 循环改进（`loop_refine.py`）
 - `LoopAgent` 在限定次数内循环 Critic → Refiner。
 - Refiner 可调用 `exit_loop` 提前终止。
+
+**循环改进流程图**
+```mermaid
+flowchart TD
+  U[User] --> L[loop_agent]
+  L --> C[critic_agent]
+  C --> R[refiner_agent]
+  R -->|continue| C
+  R -->|exit_loop| U
+```
 
 ## 运行入口
 - `WORKFLOW=delegation|sequential|parallel|loop`
 - `PROMPT=...`
 - 执行：`python apps/main.py`
-
-## 关系图（文字版）
-- apps 负责加载 workflow
-- workflow 负责组织 agents
-- agents 使用 tools
-- state 在 agents 之间传递
-

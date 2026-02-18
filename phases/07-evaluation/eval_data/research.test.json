@@ -1,0 +1,53 @@
+[
+  {
+    "name": "search_ai_trends",
+    "data": [
+      {
+        "query": "Research the latest AI trends",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_web",
+            "tool_input": {
+              "query": "latest AI trends"
+            }
+          }
+        ],
+        "reference": "Based on my research, the latest AI trends include significant progress in automation, scalability, and integration. The AI market is projected to grow significantly, with major players investing heavily in this space."
+      }
+    ]
+  },
+  {
+    "name": "search_edge_computing",
+    "data": [
+      {
+        "query": "What is edge computing and its applications?",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_web",
+            "tool_input": {
+              "query": "edge computing applications"
+            }
+          }
+        ],
+        "reference": "Edge computing processes data near its source rather than in a centralized data center. Key applications include IoT devices, autonomous vehicles, and real-time analytics. The technology enables lower latency and reduced bandwidth usage."
+      }
+    ]
+  },
+  {
+    "name": "search_quantum_computing",
+    "data": [
+      {
+        "query": "Tell me about quantum computing breakthroughs",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_web",
+            "tool_input": {
+              "query": "quantum computing breakthroughs"
+            }
+          }
+        ],
+        "reference": "Recent quantum computing breakthroughs include advances in error correction, increased qubit counts, and new quantum algorithms. Major companies and research institutions are making significant progress toward practical quantum advantage."
+      }
+    ]
+  }
+]

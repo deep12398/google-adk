@@ -1,0 +1,38 @@
+[
+  {
+    "name": "search_intent",
+    "data": [
+      {
+        "query": "I need to find stainless steel sheets",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent", "tool_input": {"user_message": "I need to find stainless steel sheets"}}
+        ],
+        "reference": "Intent classified as search."
+      }
+    ]
+  },
+  {
+    "name": "quote_intent",
+    "data": [
+      {
+        "query": "How much does aluminum cost per ton?",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent"}
+        ],
+        "reference": "Intent classified as quote."
+      }
+    ]
+  },
+  {
+    "name": "chitchat_intent",
+    "data": [
+      {
+        "query": "Hello, good morning!",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent"}
+        ],
+        "reference": "Intent classified as chitchat."
+      }
+    ]
+  }
+]

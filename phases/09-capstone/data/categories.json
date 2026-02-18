@@ -1,0 +1,22 @@
+{
+  "steel": {
+    "aliases": ["stainless steel", "carbon steel", "steel sheet", "steel plate", "steel coil", "steel pipe"],
+    "parent": "metals"
+  },
+  "aluminum": {
+    "aliases": ["aluminium", "aluminum alloy", "aluminum sheet", "aluminum coil", "AL"],
+    "parent": "metals"
+  },
+  "fasteners": {
+    "aliases": ["bolts", "nuts", "screws", "washers", "anchors", "rivets"],
+    "parent": "hardware"
+  },
+  "packaging": {
+    "aliases": ["cartons", "boxes", "shrink wrap", "bubble wrap", "stretch film", "labels"],
+    "parent": "consumables"
+  },
+  "electronics": {
+    "aliases": ["PCB", "circuit board", "LED", "connector", "resistor", "capacitor"],
+    "parent": "components"
+  }
+}

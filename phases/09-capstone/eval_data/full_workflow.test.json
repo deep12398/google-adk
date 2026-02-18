@@ -1,0 +1,33 @@
+[
+  {
+    "name": "search_and_compare",
+    "data": [
+      {
+        "query": "Find steel sheets and compare the top results",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent"},
+          {"tool_name": "search_catalog"},
+          {"tool_name": "compare_products"}
+        ],
+        "reference": "Found steel products and presented a comparison."
+      }
+    ]
+  },
+  {
+    "name": "full_sourcing_workflow",
+    "data": [
+      {
+        "query": "I need 500 tons of 304 stainless steel, ISO9001, deliver in 2 weeks, get me a quote",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent"},
+          {"tool_name": "infer_category"},
+          {"tool_name": "collect_requirements"},
+          {"tool_name": "search_catalog"},
+          {"tool_name": "generate_quote"},
+          {"tool_name": "save_document"}
+        ],
+        "reference": "Collected requirements, searched catalog, generated and saved a quote."
+      }
+    ]
+  }
+]

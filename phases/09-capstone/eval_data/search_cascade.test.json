@@ -1,0 +1,44 @@
+[
+  {
+    "name": "tier1_catalog_hit",
+    "data": [
+      {
+        "query": "Find stainless steel sheets",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent", "tool_input": {"user_message": "Find stainless steel sheets"}},
+          {"tool_name": "search_catalog", "tool_input": {"query": "stainless steel"}}
+        ],
+        "reference": "Found stainless steel products in our catalog."
+      }
+    ]
+  },
+  {
+    "name": "tier1_to_tier2_cascade",
+    "data": [
+      {
+        "query": "Find titanium alloy suppliers",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent"},
+          {"tool_name": "search_catalog"},
+          {"tool_name": "search_suppliers"}
+        ],
+        "reference": "Catalog results insufficient, searched supplier database."
+      }
+    ]
+  },
+  {
+    "name": "full_cascade_tier1_to_tier3",
+    "data": [
+      {
+        "query": "Find carbon fiber composite panels",
+        "expected_tool_use": [
+          {"tool_name": "classify_intent"},
+          {"tool_name": "search_catalog"},
+          {"tool_name": "search_suppliers"},
+          {"tool_name": "search_external"}
+        ],
+        "reference": "No internal results, searched external sources."
+      }
+    ]
+  }
+]

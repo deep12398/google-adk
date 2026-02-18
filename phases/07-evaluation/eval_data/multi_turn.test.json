@@ -1,0 +1,31 @@
+[
+  {
+    "name": "multi_turn_research_session",
+    "data": [
+      {
+        "query": "Search for information about machine learning frameworks",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_web",
+            "tool_input": {
+              "query": "machine learning frameworks"
+            }
+          }
+        ],
+        "reference": "Popular machine learning frameworks include TensorFlow, PyTorch, and JAX. Each has unique strengths for different use cases."
+      },
+      {
+        "query": "Now compare TensorFlow and PyTorch specifically",
+        "expected_tool_use": [
+          {
+            "tool_name": "search_web",
+            "tool_input": {
+              "query": "TensorFlow vs PyTorch comparison"
+            }
+          }
+        ],
+        "reference": "TensorFlow excels in production deployment and mobile support, while PyTorch is preferred for research due to its dynamic computation graph and Pythonic API."
+      }
+    ]
+  }
+]

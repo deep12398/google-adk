@@ -1,0 +1,112 @@
+[
+  {
+    "id": "S001",
+    "name": "Shanghai Baosteel Trading Co.",
+    "categories": ["steel"],
+    "main_products": "stainless steel sheets, coils, plates, pipes",
+    "location": "Shanghai",
+    "rating": 4.8,
+    "certifications": ["ISO9001", "ISO14001", "IATF16949"],
+    "min_order_value": 50000,
+    "verified": true
+  },
+  {
+    "id": "S002",
+    "name": "Jiangsu Shagang Steel Co.",
+    "categories": ["steel"],
+    "main_products": "carbon steel plates, sheets, structural steel",
+    "location": "Jiangsu",
+    "rating": 4.5,
+    "certifications": ["ISO9001", "CE"],
+    "min_order_value": 30000,
+    "verified": true
+  },
+  {
+    "id": "S003",
+    "name": "Henan Mingtai Aluminum Co.",
+    "categories": ["aluminum"],
+    "main_products": "aluminum sheets, coils, foils, plates",
+    "location": "Henan",
+    "rating": 4.6,
+    "certifications": ["ISO9001", "ISO14001", "AS9100"],
+    "min_order_value": 20000,
+    "verified": true
+  },
+  {
+    "id": "S004",
+    "name": "Haiyan Fastener Factory",
+    "categories": ["fasteners"],
+    "main_products": "hex bolts, nuts, screws, washers, anchors",
+    "location": "Zhejiang",
+    "rating": 4.3,
+    "certifications": ["ISO9001", "DIN"],
+    "min_order_value": 5000,
+    "verified": true
+  },
+  {
+    "id": "S005",
+    "name": "Dongguan Greatpack Carton Co.",
+    "categories": ["packaging"],
+    "main_products": "corrugated cartons, shipping boxes, custom packaging",
+    "location": "Guangdong",
+    "rating": 4.4,
+    "certifications": ["ISO9001", "FSC"],
+    "min_order_value": 3000,
+    "verified": true
+  },
+  {
+    "id": "S006",
+    "name": "Shenzhen Yongsheng Plastic Co.",
+    "categories": ["packaging"],
+    "main_products": "stretch wrap, shrink film, bubble wrap, PE bags",
+    "location": "Guangdong",
+    "rating": 4.1,
+    "certifications": ["ISO9001"],
+    "min_order_value": 2000,
+    "verified": false
+  },
+  {
+    "id": "S007",
+    "name": "Shenzhen JLC PCB Technology Co.",
+    "categories": ["electronics"],
+    "main_products": "PCB fabrication, SMT assembly, prototype boards",
+    "location": "Guangdong",
+    "rating": 4.7,
+    "certifications": ["ISO9001", "ISO14001", "UL", "IATF16949"],
+    "min_order_value": 500,
+    "verified": true
+  },
+  {
+    "id": "S008",
+    "name": "Shenzhen Everlight Electronics",
+    "categories": ["electronics"],
+    "main_products": "LED lights, connectors, resistors, capacitors",
+    "location": "Guangdong",
+    "rating": 4.2,
+    "certifications": ["ISO9001", "CE", "RoHS"],
+    "min_order_value": 1000,
+    "verified": true
+  },
+  {
+    "id": "S009",
+    "name": "Foshan Hongwang Stainless Steel",
+    "categories": ["steel"],
+    "main_products": "201 stainless steel coils, decorative sheets",
+    "location": "Guangdong",
+    "rating": 4.0,
+    "certifications": ["ISO9001"],
+    "min_order_value": 10000,
+    "verified": false
+  },
+  {
+    "id": "S010",
+    "name": "Ningbo Yinzhou Metals Trading Co.",
+    "categories": ["steel", "aluminum"],
+    "main_products": "steel pipes, aluminum profiles, copper tubes",
+    "location": "Zhejiang",
+    "rating": 4.3,
+    "certifications": ["ISO9001", "SGS"],
+    "min_order_value": 15000,
+    "verified": true
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "evaluation_summary": {
+    "timestamp": "2026-02-15T16:14:21.713268+00:00",
+    "total_cases": 3,
+    "passed": 2,
+    "failed": 1,
+    "pass_rate": 0.667,
+    "average_metrics": {
+      "faithfulness": {
+        "avg": 0.323,
+        "min": 0.0,
+        "max": 0.968,
+        "count": 3
+      },
+      "quality": {
+        "avg": 0.667,
+        "min": 0.0,
+        "max": 1.0,
+        "count": 3
+      },
+      "trajectory": {
+        "avg": 0.667,
+        "min": 0.0,
+        "max": 1.0,
+        "count": 3
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "case_id": "good_agent",
+      "metrics": {
+        "trajectory": 1.0,
+        "faithfulness": 0.968,
+        "quality": 1.0
+      },
+      "status": "PASSED",
+      "metadata": {
+        "composite_score": 0.987
+      }
+    },
+    {
+      "case_id": "bad_agent",
+      "metrics": {
+        "trajectory": 0.0,
+        "faithfulness": 0.0,
+        "quality": 0.0
+      },
+      "status": "FAILED",
+      "metadata": {
+        "composite_score": 0.0
+      }
+    },
+    {
+      "case_id": "hallucinated_agent",
+      "metrics": {
+        "trajectory": 1.0,
+        "faithfulness": 0.0,
+        "quality": 1.0
+      },
+      "status": "PASSED",
+      "metadata": {
+        "composite_score": 0.6
+      }
+    }
+  ]
+}
